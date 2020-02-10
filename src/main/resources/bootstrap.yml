@@ -1,0 +1,8 @@
+spring:
+  application.name: utils-admin-server
+  cloud:
+    config:
+      uri: http://utils-config-server:8888
+      fail-fast: true
+      username: user
+      password: none
