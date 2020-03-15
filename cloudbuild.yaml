@@ -17,8 +17,9 @@ steps:
       - name: 'm2'
         path: /root/.m2
   - id: 'Compile project'
-    name: 'gcr.io/cloud-builders/mvn'
-    args: ['-s', '.settings.xml', '-Dmaven.wagon.http.ssl.insecure=true', 'clean', 'deploy']
+    name: maven:3-jdk-13
+    entrypoint: 'mvn'
+    args: ['-s', '.settings.xml', '-Dmaven.wagon.http.ssl.insecure=true', 'clean', 'install']
     secretEnv: ['NEXUS_PASSWORD']
     env:
       - 'NEXUS_USERNAME=${_NEXUS_USERNAME}'
