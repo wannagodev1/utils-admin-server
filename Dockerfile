@@ -14,4 +14,4 @@ ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urando
 
 HEALTHCHECK --interval=30s --timeout=30s --retries=10 CMD curl -f http://localhost:8102/actuator/health || exit 1
 
-EXPOSE 9090 8102
+EXPOSE 8002 8102
