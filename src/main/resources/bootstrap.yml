@@ -6,3 +6,8 @@ spring:
       fail-fast: true
       username: user
       password: none
+  boot:
+    admin:
+      ui:
+        public-url: ${spring-boot-admin-ui-public-url}
+        title: ${spring-boot-admin-ui-title}
