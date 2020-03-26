@@ -1,0 +1,13 @@
+spring:
+  application.name: utils-admin-server
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      username: user
+      password: none
+  boot:
+    admin:
+      ui:
+        public-url: ${spring-boot-admin-ui-public-url}
+        title: ${spring-boot-admin-ui-title}
